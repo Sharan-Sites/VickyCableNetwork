@@ -11,6 +11,20 @@
     .card { margin-bottom: 20px; }
   </style>
 </head>
+
+  <script>
+// Fetch data from Google Apps Script
+async function loadData() {
+  try {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbxVyXvu8k32d1STseHOGRXDXr4NIBM0XaU_WFif58nkEpm-XfPaWoDT0fAyqpyVdZtG8Q/exec');
+    const data = await response.json();
+    // Use data to populate your GitHub Pages site
+  } catch (error) {
+    console.error('Error loading data:', error);
+  }
+}
+loadData();
+</script> 
 <body>
   <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
